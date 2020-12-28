@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nombre: string = 'Capitán América'
+  name = 'Bruno';
+  characters: string[] = ['Ironman', 'Spiderman', 'Thor', 'Loki', 'Groot'];
+  PI = Math.PI;
+  percent = 0.234;
+  salary = 1234.5;
+  hero = {
+    name: 'Logan',
+    key: 'Wolverine',
+    age: 500,
+    address: {
+      street: 'First',
+      number: 20
+    }
+  };
 }

@@ -14,17 +14,103 @@
       
       <tbody>
         <tr>
-          <td>{{ nombre }}</td>
+          <td>{{ name }}</td>
           <td>uppercase</td>
-          <td>{{ nombre | uppercase }}</td>
+          <td>{{ name | uppercase }}</td>
         </tr>
 
         <tr>
-          <td>{{ nombre }}</td>
+          <td>{{ name }}</td>
           <td>lowercase</td>
-          <td>{{ nombre | lowercase }}</td>
+          <td>{{ name | lowercase }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ name }}</td>
+          <td>slice:3</td>
+          <td>{{ name | slice:3 }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ name }}</td>
+          <td>slice:-3</td>
+          <td>{{ name | slice:-3 }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ name }}</td>
+          <td>slice:0:3</td>
+          <td>{{ name | slice:0:3 }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ characters }}</td>
+          <td>slice:1:5</td>
+          <td>{{ characters | slice:1:5 }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ PI }}</td>
+          <td>number: '2.1-5'</td>
+          <td>{{ PI | number: '2.1-5' }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ PI }}</td>
+          <td>number: '.0-2'</td>
+          <td>{{ PI | number: '.0-2' }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ PI }}</td>
+          <td>number:'3.5-5'</td>
+          <td>{{ PI | number:'3.5-5' }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ percent }}</td>
+          <td>percent</td>
+          <td>{{ percent | percent }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ percent }}</td>
+          <td>percent</td>
+          <td>{{ percent | percent: '2.2-2' }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ salary }}</td>
+          <td>currency</td>
+          <td>{{ salary | currency }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ salary }}</td>
+          <td>currency: 'EUR'</td>
+          <td>{{ salary | currency: 'EUR' }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ salary }}</td>
+          <td>currency: 'CAD': 'symbol': '.0-0'</td>
+          <td>{{ salary | currency: 'CAD': 'symbol': '.0-0' }}</td>
         </tr>
       </tbody>
     </table>
+
+    <h3>Slice <small>slice:1:4</small></h3>
+    <hr>
+    <ul>
+      <li *ngFor="let character of characters | slice:1:4" class="list-group-item">{{ character }}</li>
+    </ul>
+
+    <h3>JSON</h3>
+    <hr>
+    <div class="row mb-5">
+      <div class="col">
+        <pre>{{ hero | json }}</pre>
+      </div>
+    </div>
   </div>
 </div>
