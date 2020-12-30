@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Bruno';
+  name = 'Capitán América';
   characters: string[] = ['Ironman', 'Spiderman', 'Thor', 'Loki', 'Groot'];
   PI = Math.PI;
   percent = 0.234;
@@ -20,4 +20,14 @@ export class AppComponent {
       number: 20
     }
   };
+  valuePromise = new Promise<string>((resolve) => {
+    setTimeout(() => {
+      resolve('Llegó la data');
+    }, 3000);
+  });
+  date: Date = new Date();
+  language = 'es';
+  name2 = 'bRuNo mUñOz fEiJóO';
+  videoUrl = 'https://www.youtube.com/embed/eVTXPUF4Oz4';
+  activate = true;
 }
